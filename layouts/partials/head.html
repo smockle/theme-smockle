@@ -18,7 +18,26 @@
   <link href="{{ "assets/css/highlight.css" | relURL }}?{{ .Site.Params.theme_seconds }}" rel="stylesheet">
   <link rel="stylesheet" href="{{ "custom.css" | relURL }}?{{ .Site.Params.theme_seconds }}">
 
-	<link rel="shortcut icon" href="https://micro.blog/{{ .Site.Author.username }}/favicon.png?x=1" type="image/x-icon" />
+  <meta name="theme-color" content="#26856d">
+  <link rel="icon" href="https://blog.smockle.com/uploads/2019/9d730becb3.png" />
+  <link rel="apple-touch-icon" href="https://blog.smockle.com/uploads/2019/2c6e7aded3.png">
+
+   {{ if (eq .Title "Home") }}
+     <meta property="og:title" content="{{ .Site.Title }}">
+     <meta name="twitter:title" content="{{ .Site.Title }}">
+     <meta property="og:site_url" content="https://www.smockle.com">
+   {{ else }}
+     <meta property="og:title" content="{{ cond (eq .Title "Smockle") "Smockle Blog" .Title | default "Smockle Blog" }}">
+     <meta name="twitter:title" content="{{ cond (eq .Title "Smockle") "Smockle Blog" .Title | default "Smockle Blog" }}">
+      <meta property="og:site_url" content="{{ .Permalink }}">
+   {{ end }}
+   <meta property="og:image" content="https://blog.smockle.com/uploads/2019/2c25cceece.png">
+   <meta property="twitter:image" content="https://blog.smockle.com/uploads/2019/f77b16f22b.png">
+   <meta property="og:type" content="website">
+   <meta name="twitter:card" content="summary">
+   	{{ with .Site.Params.twitter_username }}
+        <meta name="twitter:creator" content="@{{ . }}">
+	{{ end }}
 
     {{ if .RSSLink -}}
       <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
