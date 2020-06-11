@@ -321,3 +321,8 @@ html[data-home] { background-color: var(--color-section); }
   .network-icons a { flex-basis: 20%; }
   .network-icon { width: 3.7rem; }
 }
+
+/* On page2+ show extra pagination controls at the top of post list */
+.paged .extra-pagination {
+    display: block;
+}
