@@ -1,0 +1,18 @@
+# From https://github.com/chancancode/branch-rename/#phase-1-mirror-master-and-main
+name: Mirror "master" and "main" branches
+on:
+  push:
+    branches:
+      - master
+      - main
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Push
+        run: git push origin HEAD:master HEAD:main
