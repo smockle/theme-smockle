@@ -1,10 +1,10 @@
 # theme-smockle
 
-#### Demo: [https://www.smockle.com/](https://www.smockle.com/)
+#### Demo: [https://www.smockle.com](https://www.smockle.com/)
 
 ## Screenshot
 
-![screenshot](screenshot/home.png)
+![screenshot](screenshot/home.png?v=1)
 
 This theme applies styles from https://github.com/smockle/smockle.com to layouts from Micro.blog’s [theme-marfa](https://github.com/microdotblog/theme-marfa), which is based on [marfa](https://github.com/mmarfil/marfa), a port of [Cactus](https://github.com/eudicots/Cactus).
 
