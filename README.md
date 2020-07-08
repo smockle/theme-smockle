@@ -7,10 +7,12 @@ The theme applies styles from https://github.com/smockle/smockle.com to layouts 
 ## Screenshots
 
 **Light**
-![screenshot](screenshot/home.png?v=0000)
+![screenshot](screenshot/www-light.png?v=2)
+![screenshot](screenshot/blog-light.png?v=2)
 
 **Dark**
-![screenshot](screenshot/home-dark.png?v=0000)
+![screenshot](screenshot/www-dark.png?v=2)
+![screenshot](screenshot/blog-dark.png?v=2)
 
 ## Usage
 
