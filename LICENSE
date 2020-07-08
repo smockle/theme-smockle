@@ -1,8 +1,15 @@
 MIT License
 
-`.github`, `layouts` (specifically, the additions and changes in https://github.com/microdotblog/theme-marfa/compare/master...smockle:main), `screenshot`, `static`, and all files not otherwise attributed are copyrighted (c) 2019–2020 Clay Miller
+`.github`, `layouts` (specifically, the additions and changes in
+https://github.com/microdotblog/theme-marfa/compare/master...smockle:main),
+`screenshot`, `static`, and all files not otherwise attributed are
+copyrighted (c) 2019–2020 Clay Miller
 
-`layouts` (excepting the additions and changes in https://github.com/microdotblog/theme-marfa/compare/master...smockle:main) is copyrighted (c) 2015 Cactus Authors - https://github.com/koenbok/Cactus/blob/master/AUTHORS -  Released under the MIT License.
+`layouts` (excepting the additions and changes in
+https://github.com/microdotblog/theme-marfa/compare/master...smockle:main) is
+copyrighted (c) 2015 Cactus Authors -
+https://github.com/koenbok/Cactus/blob/master/AUTHORS - 
+Released under the MIT License.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
