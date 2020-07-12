@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="{{ "custom.css" | relURL }}?{{ .Site.Params.theme_seconds }}">
 
   <meta name="theme-color" content="#26856d">
-	<link rel="icon" href="https://blog.smockle.com/uploads/2019/9d730becb3.png" />
+  <link rel="icon" href="https://blog.smockle.com/uploads/2019/9d730becb3.png" />
   <link rel="apple-touch-icon" href="https://blog.smockle.com/uploads/2019/2c6e7aded3.png">
 
    {{ if (eq .Title "Home") }}
@@ -62,4 +62,10 @@
 	<link rel="microsub" href="https://micro.blog/microsub" />
 	<link rel="webmention" href="https://micro.blog/webmention" />
 	<link rel="subscribe" href="https://micro.blog/users/follow" />
+    {{ range .Site.Params.plugins_css }}
+	    <link rel="stylesheet" href="{{ . }}" />
+    {{ end }}
+    {{ range $filename := .Site.Params.plugins_html }}
+    	{{ partial $filename $ }}
+    {{ end }}
 </head>

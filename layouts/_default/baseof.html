@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 {{ if (eq .Title "Home") }}
-<html data-home="true">
+<html lang="en" data-home="true">
 {{ else }}
-<html>
+<html lang="en">
 {{ end }}
-    {{ partial "head.html" . }}
-    <body>
-        {{ partial "header.html" . }}
-        {{ block "main" . }}{{ end }}
-        {{ partial "footer.html" . }}
-		{{ partial "custom_footer.html" . }}
-    </body>
+{{ partial "head.html" . }}
+<body>
+  {{ partial "header.html" . }}
+	{{ block "main" . }}{{ end }}
+  {{ partial "footer.html" . }}
+  {{ partial "custom_footer.html" . }}
+		{{ range .Site.Params.plugins_js }}
+			<script src="{{ . }}"></script>
+		{{ end }}
+</body>
 </html>
-
