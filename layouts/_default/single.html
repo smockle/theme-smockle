@@ -2,13 +2,20 @@
   {{ if (eq .Title "Home") }}
      {{ .Content }}
   {{ else }}
-  <article class="h-entry post">
-    <header>
-      <h1 class="p-name">{{ .Title }}</h1>
-    </header>
-    <section class="e-content post-body">
-        {{ .Content }}
-    </section>
-  </article>
+    <article class="h-entry post">
+      <header>
+      <div class="dates">
+          <time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}">
+            {{ .Date.Format "Jan 2, 2006" }}
+          </time>
+        </div>
+      {{ with .Title }}
+        <h1 class="p-name">{{ . }}</h1>
+        {{ end }}
+      </header>
+      <section class="e-content post-body">
+          {{ .Content }}
+      </section>
+    </article>
   {{ end }}
 {{ end }}
