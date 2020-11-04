@@ -29,7 +29,7 @@
 @font-face {
   font-family: "Lato";
   src: local("Lato Black"), local("Lato-Black"),
-    url("https://blog.smockle.com/uploads/2019/1d66261e60.woff") format("woff2");
+    url("/assets/fonts/lato-black.woff") format("woff2");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -37,7 +37,7 @@
 @font-face {
   font-family: "Crimson Pro S";
   src: local("CrimsonProS Regular"), local("CrimsonProS-Regular"),
-    url("https://blog.smockle.com/uploads/2019/01c298fefe.woff") format("woff2");
+    url("/assets/fonts/crimson-pro-s-regular.woff") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -45,7 +45,7 @@
 @font-face {
   font-family: "Crimson Pro S";
   src: local("CrimsonProS Italic"), local("CrimsonProS-Italic"),
-    url("https://blog.smockle.com/uploads/2019/d89357d2ad.woff") format("woff2");
+    url("/assets/fonts/crimson-pro-s-italic.woff") format("woff2");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -53,7 +53,7 @@
 @font-face {
   font-family: "Crimson Pro S";
   src: local("CrimsonProS Bold"), local("CrimsonProS-Bold"),
-    url("https://blog.smockle.com/uploads/2019/7ddb7ecc82.woff") format("woff2");
+    url("/assets/fonts/crimson-pro-s-bold.woff") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
