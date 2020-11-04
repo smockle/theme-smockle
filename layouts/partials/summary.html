@@ -5,18 +5,16 @@
     </time>
   </aside>
   {{ if .Title }}
-  <section class="post-body">
-  <header>
-	<h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-  </header>
-  <section class="post-body">
-    {{ .Summary }}
-    {{ if .Truncated }}
-		<p class="read-more">[…]</p>
-    {{ end }}
-  </section>
-  </section>
+    <section class="post-body">
+      <header>
+        <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+      </header>
+      {{ .Summary }}
+      {{ if .Truncated }}
+        <p class="read-more">[…]</p>
+      {{ end }}
+    </section>
   {{ else }}
-	{{ .Content }}
+	  {{ .Content }}
   {{ end }}
 </article>
