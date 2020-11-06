@@ -1,13 +1,13 @@
 <article>
   <aside class="dates">
     <time datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}" class="dt-published">
-	  <a href="{{ .Permalink }}" class="u-url dates">{{ .Date.Format "Jan 2, 2006" }}</a>
+	  <a href="{{ cond (in (.Site.BaseURL | string) "localhost") .RelPermalink  (replace .RelPermalink "/blog" "https://blog.smockle.com") }}" class="u-url dates">{{ .Date.Format "Jan 2, 2006" }}</a>
     </time>
   </aside>
   {{ if .Title }}
     <section class="post-body">
       <header>
-        <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+        <h1><a href="{{ cond (in (.Site.BaseURL | string) "localhost") .RelPermalink  (replace .RelPermalink "/blog" "https://blog.smockle.com") }}">{{ .Title }}</a></h1>
       </header>
       {{ .Summary }}
       {{ if .Truncated }}

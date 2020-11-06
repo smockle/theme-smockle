@@ -30,7 +30,7 @@
 		<title>Smockle Blog - {{ .Title }}</title>
 		<meta property="og:title" content="Smockle Blog - {{ .Title }}">
 		<meta name="twitter:title" content="Smockle Blog - {{ .Title }}">
-		<meta property="og:site_url" content="https://blog.smockle.com{{ replace .RelPermalink "/blog" "" }}">
+		<meta property="og:site_url" content="{{ cond (in (.Site.BaseURL | string) "localhost") .Permalink  (replace .RelPermalink "/blog" "https://blog.smockle.com") }}">
 	{{ end }}
 	<meta property="og:image" content="{{ .Site.BaseURL }}assets/images/og-image.png">
 	<meta property="twitter:image" content="{{ .Site.BaseURL }}assets/images/twitter-image.png">
