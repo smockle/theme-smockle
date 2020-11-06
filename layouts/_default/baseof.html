@@ -12,41 +12,32 @@
   <meta content="{{ .Site.Author.name }}" name="author">
   <meta name="supported-color-schemes" content="light dark">
 
-  <title>
-    {{- block "title" . -}}
-			{{- .Site.Title -}}
-			{{- if .Title }}
-				- {{ .Title }}
-			{{- end -}}
-    {{- end -}}
-  </title>
-
-  <link href="{{ "assets/css/style.css" | relURL }}" rel="stylesheet">
-
   <meta name="theme-color" content="#26856d">
-  <link rel="icon" href="/assets/images/favicon.png" />
-  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+  <link rel="icon" href="{{ .Site.BaseURL }}assets/images/favicon.png" />
+  <link rel="apple-touch-icon" href="{{ .Site.BaseURL }}assets/images/apple-touch-icon.png">
 
 	{{ if (eq .Title "Home") }}
-		<meta property="og:title" content="{{ .Site.Title }}">
-		<meta name="twitter:title" content="{{ .Site.Title }}">
+		<title>Smockle</title>
+		<meta property="og:title" content="Smockle">
+		<meta name="twitter:title" content="Smockle">
 		<meta property="og:site_url" content="https://www.smockle.com">
+	{{ else if (eq .Title "Posts") }}
+		<title>Smockle Blog</title>
+		<meta property="og:title" content="Smockle Blog">
+		<meta name="twitter:title" content="Smockle Blog">
+		<meta property="og:site_url" content="https://blog.smockle.com">
 	{{ else }}
-		<meta property="og:title" content="{{ cond (eq .Title "Smockle") "Smockle Blog" .Title | default "Smockle Blog" }}">
-		<meta name="twitter:title" content="{{ cond (eq .Title "Smockle") "Smockle Blog" .Title | default "Smockle Blog" }}">
-		<meta property="og:site_url" content="{{ .Permalink }}">
+		<title>Smockle Blog - {{ .Title }}</title>
+		<meta property="og:title" content="Smockle Blog - {{ .Title }}">
+		<meta name="twitter:title" content="Smockle Blog - {{ .Title }}">
+		<meta property="og:site_url" content="https://blog.smockle.com{{ replace .RelPermalink "/blog" "" }}">
 	{{ end }}
-	<meta property="og:image" content="/assets/images/og-image.png">
-	<meta property="twitter:image" content="/assets/images/twitter-image.png">
+	<meta property="og:image" content="{{ .Site.BaseURL }}assets/images/og-image.png">
+	<meta property="twitter:image" content="{{ .Site.BaseURL }}assets/images/twitter-image.png">
 	<meta property="og:type" content="website">
 	<meta name="twitter:card" content="summary">
 
-	{{ if .OutputFormats.Get "RSS" }}
-	{{ with .OutputFormats.Get "RSS" }}
-		<link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
-		<link href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
-		{{ end }}
-	{{ end }}
+	<link href="{{ "assets/css/style.css" | relURL }}" rel="stylesheet">
 </head>
 
 <body>
