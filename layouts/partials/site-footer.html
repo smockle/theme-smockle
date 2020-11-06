@@ -4,7 +4,7 @@
     © {{ dateFormat "2006" now }} Clay Miller ~  Licensed under 
     <a rel="license" href="http://creativecommons.org/licenses/by/4.0/legalcode">
       CC-BY-4.0
-    </a> ~ <a href="/feed.xml">RSS</a>
+    </a> ~ <a href="{{ cond (in (.Site.BaseURL | string) "localhost") "/feed.xml" "https://blog.smockle.com/feed.xml" }}">RSS</a>
   </div>
 </footer>
 {{ end }}

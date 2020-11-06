@@ -37,6 +37,10 @@
 	<meta property="og:type" content="website">
 	<meta name="twitter:card" content="summary">
 
+	{{ if not (eq .Title "Home") }}
+		<link rel="alternate" type="application/rss+xml" href="{{ cond (in (.Site.BaseURL | string) "localhost") "/feed.xml" "https://blog.smockle.com/feed.xml" }}">
+	{{ end }}
+
 	<link href="{{ "assets/css/style.css" | relURL }}" rel="stylesheet">
 </head>
 
