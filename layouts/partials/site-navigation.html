@@ -2,8 +2,8 @@
 <div class="navigation">
   <section id="wrapper">
     <header class="h-card">
-      <a class="u-url" href="{{ cond (in (.Site.BaseURL | string) "localhost") "/blog" "/" }}">
-        <img id="avatar" class="u-photo logo" src="{{ .Site.BaseURL }}assets/images/smockle.svg" width="48" height="48" />
+      <a aria-label="Home" class="u-url" href="{{ cond (in (.Site.BaseURL | string) "localhost") "/blog" "/" }}">
+        <img alt="Smockle Logo" id="avatar" class="u-photo logo" src="{{ .Site.BaseURL }}assets/images/smockle.svg" width="48" height="48" />
       </a>
     </header>
   </section>

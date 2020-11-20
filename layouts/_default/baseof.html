@@ -21,16 +21,19 @@
 		<meta property="og:title" content="Smockle">
 		<meta name="twitter:title" content="Smockle">
 		<meta property="og:site_url" content="https://www.smockle.com">
+		<meta name="description" content="I’m Clay Miller. Builder. Explorer. Thought-Haver.">
 	{{ else if (eq .Title "Posts") }}
 		<title>Smockle Blog</title>
 		<meta property="og:title" content="Smockle Blog">
 		<meta name="twitter:title" content="Smockle Blog">
-		<meta property="og:site_url" content="https://blog.smockle.com">
+    <meta property="og:site_url" content="https://blog.smockle.com">
+    <meta name="description" content="I’m Clay Miller. Builder. Explorer. Thought-Haver.">
 	{{ else }}
 		<title>Smockle Blog - {{ .Title }}</title>
 		<meta property="og:title" content="Smockle Blog - {{ .Title }}">
 		<meta name="twitter:title" content="Smockle Blog - {{ .Title }}">
-		<meta property="og:site_url" content="{{ cond (in (.Site.BaseURL | string) "localhost") .Permalink  (replace .RelPermalink "/blog" "https://blog.smockle.com") }}">
+    <meta property="og:site_url" content="{{ cond (in (.Site.BaseURL | string) "localhost") .Permalink  (replace .RelPermalink "/blog" "https://blog.smockle.com") }}">
+    <meta name="description" content="{{ .Summary | plainify }}">
 	{{ end }}
 	<meta property="og:image" content="{{ .Site.BaseURL }}assets/images/og-image.png">
 	<meta property="twitter:image" content="{{ .Site.BaseURL }}assets/images/twitter-image.png">
